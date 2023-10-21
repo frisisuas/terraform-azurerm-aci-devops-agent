@@ -1,5 +1,5 @@
 # Pull the base image with given version.
-ARG BUILD_TERRAFORM_VERSION="0.14.4"
+ARG BUILD_TERRAFORM_VERSION="1.5.5"
 FROM mcr.microsoft.com/terraform-test:${BUILD_TERRAFORM_VERSION}
 
 ARG MODULE_NAME="terraform-azure-devops-agent-aci"
@@ -10,7 +10,7 @@ ARG BUILD_ARM_CLIENT_ID=""
 ARG BUILD_ARM_CLIENT_SECRET=""
 ARG BUILD_ARM_TENANT_ID=""
 ARG BUILD_ARM_TEST_LOCATION="WestEurope"
-ARG BUILD_ARM_TEST_LOCATION_ALT="WestUS"
+ARG BUILD_ARM_TEST_LOCATION_ALT="NorthEurope"
 
 # Set environment variables for terraform runtime.
 ENV ARM_SUBSCRIPTION_ID=${BUILD_ARM_SUBSCRIPTION_ID}
